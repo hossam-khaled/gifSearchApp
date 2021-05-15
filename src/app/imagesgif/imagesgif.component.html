@@ -1,0 +1,17 @@
+<div class="container">
+    <form>
+        <input id="search" type="search" name="search" [(ngModel)]="search">
+        <button type="submit" (click)="save()">Search </button>
+    </form>
+    <div class="row">
+        <div class="col" *ngFor="let item of imagesData">
+            <div class="card">
+                <div class="card-image">
+                    <img src="{{item.images.fixed_height_downsampled.url}}" alt="{{item.title}}">
+                </div>
+                <h3 class="card-title">{{item.title}}</h3>
+            </div>
+        </div>
+
+    </div>
+</div>
